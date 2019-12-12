@@ -19,3 +19,15 @@ This tool uses the following php functions-
     <li>stripslashes()</li>
     <li>htmlspecialchars()</li>
 </ul>
+
+# How to use
+Import the file in your project- <br>
+require_once("HtmlNormalizer.php");
+<br><br>
+<em>Create new instanc-</em><br>
+$normalizer = new HtmlNormalizer();
+<br><br>
+<em>Take the value you want to normalize-</em><br>
+$normalizer->HTML($raw_html);<br>
+OR, Directly from HTTP POST Request  
+$normalizer->HttpPost($http_post_field_name); <br>

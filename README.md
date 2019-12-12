@@ -14,11 +14,11 @@ This tool SHOULD NOT BE THE ONLY MECHANISM to prevent XSS attacks. Use more appr
 
 # Behind the scene
 This tool uses the following php functions-
-<ul>
-    <li>strip_tags()</li>
-    <li>stripslashes()</li>
-    <li>htmlspecialchars()</li>
-</ul>
+```sh
+strip_tags()
+stripslashes()
+htmlspecialchars()
+```
 
 # How to use
 Import the file in your project- <br>
@@ -30,4 +30,5 @@ $normalizer = new HtmlNormalizer();
 <em>Take the value you want to normalize-</em><br>
 $normalizer->HTML($raw_html);<br>
 OR, Directly from HTTP POST Request  
+<pre><code>$normalizer->HttpPost($http_post_field_name);</code></pre>
 $normalizer->HttpPost($http_post_field_name); <br>
